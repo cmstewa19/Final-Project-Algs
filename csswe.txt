@@ -1,0 +1,13 @@
+1130 COSC130 Ethical Issues in Technology (W)(E)
+1210 COSC210 Computer Science I
+1211 COSC211 Computer Science II
+1235 COSC235 Computer Organization and Architecture
+1260 COSC260 Computer Science III
+1310 COSC310 Operating Systems
+1327 COSC327 Algorithims & Adv Data Structures
+1330 COSC330 Theory of Computation
+1350 COSC350 Software Engineering
+2151 MATH151 Calculus I (MT)
+2320 MATH320 Discrete Structures
+2280 MATH280 Introduction to Statistics using R (MT)
+

@@ -1,45 +1,17 @@
 
-/******************************************************************************
- *  Compilation:  javac SymbolDigraph.java
- *  Execution:    java SymbolDigraph
- *  Dependencies: ST.java Digraph.java In.java
- *  Data files:   https://algs4.cs.princeton.edu/42digraph/routes.txt
- *
- *  %  java SymbolDigraph routes.txt " "
- *  JFK
- *     MCO
- *     ATL
- *     ORD
- *  ATL
- *     HOU
- *     MCO
- *  LAX
- *
- ******************************************************************************/
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Final Project COSC 327				  					 * 
+* Modified indexOf to assign a default value of -1           *
+* if the symbol isn't found in the digraph.  	             *
+* Cadence Stewart									         * 
+* @version May 10 2024										 *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
+/**
+*  @author Robert Sedgewick
+*  @author Kevin Wayne
+*/
 
- /**
-  *  The {@code SymbolDigraph} class represents a digraph, where the
-  *  vertex names are arbitrary strings.
-  *  By providing mappings between string vertex names and integers,
-  *  it serves as a wrapper around the
-  *  {@link Digraph} data type, which assumes the vertex names are integers
-  *  between 0 and <em>V</em> - 1.
-  *  It also supports initializing a symbol digraph from a file.
-  *  <p>
-  *  This implementation uses an {@link ST} to map from strings to integers,
-  *  an array to map from integers to strings, and a {@link Digraph} to store
-  *  the underlying graph.
-  *  The <em>indexOf</em> and <em>contains</em> operations take time
-  *  proportional to log <em>V</em>, where <em>V</em> is the number of vertices.
-  *  The <em>nameOf</em> operation takes constant time.
-  *  <p>
-  *  For additional documentation, see <a href="https://algs4.cs.princeton.edu/42digraph">Section 4.2</a> of
-  *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
-  *
-  *  @author Robert Sedgewick
-  *  @author Kevin Wayne
-  */
  public class SymbolDigraph {
      private ST<String, Integer> st;  // string -> index
      private String[] keys;           // index  -> string
@@ -116,10 +88,6 @@
         Integer index = st.get(s);
         return index != null ? index : defaultValue;
     }
-
-    //  public int indexOf(String s) {
-    //     return st.get(s);
-    //  }
  
      /**
       * Returns the name of the vertex associated with the integer {@code v}.

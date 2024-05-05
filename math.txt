@@ -1,0 +1,9 @@
+2151 MATH151 Calculus I (MT)
+2152 MATH152 Calculus II
+2153 MATH153 Calculus III
+2200 MATH200 Foundations of Mathematics
+2220 MATH220 Linear Algebra
+2490 MATH490 Senior Seminar
+1210 COSC210 Computer Science I
+2340 MATH340 Abstract Algebra
+2345 MATH345 Topology

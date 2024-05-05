@@ -1,11 +1,12 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 * Final Project COSC 327				  					 * 
-* This is a program to simulate an academic planner		     *
+* This is a program to simulate an academic planner.	     *
 * @author Cadence Stewart									 * 
 * @version May 10 2024										 *
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -17,9 +18,11 @@ public class AcademicPlanner {
 
     public AcademicPlanner(SymbolDigraph prerequisiteDigraph) {
         this.prerequisiteDigraph = prerequisiteDigraph;
-        courseInfoST = CourseInfo.initializeCourseInfo("courses.txt");
         student = new Student();
         input = new Scanner(System.in);
+
+		String majorFile = selectMajor();
+    	courseInfoST = CourseInfo.initializeCourseInfo(majorFile);
     }
 
 // method to add a course to the planner
@@ -122,7 +125,7 @@ public class AcademicPlanner {
 
 		// if courseIndex does not exist in the prerequisiteGraph then it has no prerequisites
 		if (courseIndex == -1) {
-			return false;    // no prerequisites
+			return true;    // no prerequisites
 		}
 
 		// retrieve the vertices pointing to the courseIndex using custom reverseAdj method in Digraph
@@ -184,16 +187,14 @@ public class AcademicPlanner {
             switch (choice) {
 
                 case "1":
-                    System.out.println("Enter course ID, ex: COSC100: ");
+					System.out.println("Enter course ID: ");
                     String courseIDToAdd = input.nextLine();
-                    System.out.println("Debug: Input Course ID: " + courseIDToAdd);
                     addCourse(courseIDToAdd);
                     break;
 
                 case "2":
-					System.out.println("Enter course ID, ex: COSC100: ");
+					System.out.println("Enter course ID: ");
 					String courseIDToRemove = input.nextLine();
-					System.out.println("Debug: Input Course ID: " + courseIDToRemove);
 					removeCourse(courseIDToRemove);
                     break;
 
@@ -202,11 +203,24 @@ public class AcademicPlanner {
                     break;
 
                 case "4":
-                    System.out.println("Functionality not implemented yet.");
+					System.out.println("--------------------------");
+					System.out.println("| Major Required Courses |");
+					System.out.println("--------------------------");
+
+					List<Integer> keysList = new ArrayList<>();
+					for (Integer key : courseInfoST.keys()) {
+						keysList.add(key);
+					}
+					Collections.sort(keysList); // Sort the keys
+
+					for (Integer key : keysList) {
+						CourseInfo course = courseInfoST.get(key);
+						System.out.println(course.getCourseID() + " - " + course.getCourseName());
+					}
                     break;
 
                 case "5":
-                    System.out.println("Enter course ID, ex: COSC100: ");
+                    System.out.println("Enter course ID: ");
                     String courseIDForPrereq = input.nextLine();
                     displayPrerequisiteInfo(courseIDForPrereq);
                     break;
@@ -227,6 +241,28 @@ public class AcademicPlanner {
             }
         } while (true); // Repeat until user chooses to exit
     }
+
+	private String selectMajor(){
+		while (true) {
+			System.out.println("Select major: ");
+			System.out.println("1. Computer Science");
+			System.out.println("2. Data Science");
+			System.out.println("3. Mathematics");
+
+			String in = input.nextLine();
+			switch (in) {
+				case "1":
+					return "csswe.txt";
+				case "2":
+					return "ds.txt";
+				case "3":
+					return "math.txt";
+				default :
+					System.out.println("Invalid input, select a valid major.");
+					break;
+			}
+		}
+	}
 
     // Help/displays choice menu
     private void menu() {

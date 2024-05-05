@@ -1,3 +1,10 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* Final Project COSC 327				  					 * 
+* This is a program to simulate an academic planner.	     *
+* @author Cadence Stewart									 * 
+* @version May 10 2024										 *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 import java.util.ArrayList;
 import java.util.List;
 

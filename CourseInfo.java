@@ -1,6 +1,7 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 * Final Project COSC 327				  					 * 
-* This is a program to simulate an academic planner		     *
+* This is a class that represents information about a        *
+* course, including its number, ID and name. 	             *
 * @author Cadence Stewart									 * 
 * @version May 10 2024										 *
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -32,7 +33,7 @@ public class CourseInfo {
         return courseName;
     }
 
-    // method to initialize course information from file
+    // method to initialize course information hash table from file
     public static SeparateChainingHashST<Integer, CourseInfo> initializeCourseInfo(String filename) {
         SeparateChainingHashST<Integer, CourseInfo> courseInfoST = new SeparateChainingHashST<>();
         try {
@@ -52,8 +53,6 @@ public class CourseInfo {
             scanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("File not found: " + filename);
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid course number format in file: " + filename);
         }
         return courseInfoST;
     }

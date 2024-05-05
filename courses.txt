@@ -23,4 +23,3 @@
 2340 MATH340 Abstract Algebra
 2345 MATH345 Topology
 2490 MATH490 Senior Seminar
-3270 ECON270 Statistics (MT)
