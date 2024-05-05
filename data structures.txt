@@ -1,0 +1,19 @@
+Data Structures:
+
+courseDigraph - digraph where edges represent prerequisite relationships between courses
+	- checkPrerequisites: 
+	
+
+courseTable - manages student courses, instance variable (new one every use)
+	- addCourse: takes a course and adds it to the courseTable
+	- removeCourse: takes a course and deletes it from the courseTable
+	- studentCourseTableOut: print courseTable
+	- displayCourseMap: prints the digraph of the majorDigraph
+
+courseInfoMap - maps course info (int courseID, String courseName)
+	- initializeCourseInfoMap: parses a file (courses.txt) into a hash map
+	- course: courseNumer, courseID, courseName 
+	- ex: (1180, "COSC180", "Ethical Issues in Technology"
+
+
+

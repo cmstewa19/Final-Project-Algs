@@ -1,0 +1,26 @@
+1130 COSC130 Ethical Issues in Technology (W)(E)
+1210 COSC210 Computer Science I
+1211 COSC211 Computer Science II
+1212 COSC212 Introduction to Data Science
+1215 COSC215 Fundamentals of Database Processing
+1235 COSC235 Computer Organization and Architecture
+1260 COSC260 Computer Science III
+1310 COSC310 Operating Systems
+1316 COSC316 Intermediate Data Science
+1322 COSC322 Data Visualization
+1327 COSC327 Algorithims & Adv Data Structures
+1330 COSC330 Theory of Computation
+1350 COSC350 Software Engineering
+2151 MATH151 Calculus I (MT)
+2152 MATH152 Calculus II
+2153 MATH153 Calculus III
+2200 MATH200 Foundations of Mathematics
+2220 MATH220 Linear Algebra
+2280 MATH280 Introduction to Statistics using R (MT)
+2315 MATH315 Probability And Statistics
+2320 MATH320 Discrete Structures
+2327 MATH327 Mathematical Foundations of Data Science
+2340 MATH340 Abstract Algebra
+2345 MATH345 Topology
+2490 MATH490 Senior Seminar
+3270 ECON270 Statistics (MT)
